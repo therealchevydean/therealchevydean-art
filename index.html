@@ -19,13 +19,20 @@
 <body class="font-lora antialiased selection:bg-[#00ffcc] selection:text-[#050b14]">
   
   <!-- HERO SECTION -->
-  <section class="w-full min-h-[50vh] flex flex-col items-center justify-center text-center px-6 py-20 border-b border-white/5">
-    <h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-wide leading-tight">
-      The Architect Behind The Work
-    </h1>
-    <p class="font-cinzel text-xl md:text-2xl neon-teal tracking-widest uppercase">
-      Renaissance Man Reincarnated
-    </p>
+  <section class="w-full min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-28 border-b border-white/5 relative overflow-hidden">
+    <!-- Faint Line Art Silhouette Watermark -->
+    <div class="absolute inset-0 flex items-center justify-center opacity-15 pointer-events-none select-none overflow-hidden">
+      <img src="assets/portrait_silhouette_transparent.png" alt="Chevy Dean Silhouette" class="h-[110%] max-w-none object-contain transform translate-y-6 filter drop-shadow-[0_0_25px_rgba(0,255,204,0.3)]">
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-wide leading-tight drop-shadow-md">
+        The Architect Behind The Work
+      </h1>
+      <p class="font-cinzel text-xl md:text-2xl neon-teal tracking-widest uppercase font-bold drop-shadow">
+        Renaissance Man Reincarnated
+      </p>
+    </div>
   </section>
 
   <!-- BIO SECTION -->
@@ -51,38 +58,75 @@
 
   <!-- THE WORKS SECTION -->
   <section class="max-w-5xl mx-auto px-6 py-24 border-b border-white/5">
-    <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white mb-16 text-center uppercase tracking-wide">
-      THE WORKS
-    </h2>
+    <!-- THE WORKS HEADER WITH DELIVERY HIGHLIGHT -->
+    <div class="text-center mb-16">
+      <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-wide">
+        THE WORKS
+      </h2>
+      <div class="inline-flex items-center gap-3 bg-[#00ffcc]/10 border border-[#00ffcc]/30 px-6 py-3.5 rounded-full text-slate-200 text-sm md:text-base font-lora shadow-[0_0_20px_rgba(0,255,204,0.15)] max-w-2xl mx-auto text-left sm:text-center">
+        <span class="neon-teal text-xl font-bold">⚡</span>
+        <span>Every purchase instantly delivers a <strong>numbered NFT Certificate of Authenticity</strong> (Base L2) and <strong>direct PDF book link</strong> straight to your inbox. No crypto setup required.</span>
+      </div>
+    </div>
 
     <div class="grid md:grid-cols-2 gap-10">
       <!-- Product block one - LIVE -->
       <div class="border border-white/10 p-10 rounded-xl flex flex-col h-full hover:border-[#00ffcc]/50 transition duration-500 bg-white/5 shadow-2xl relative overflow-hidden">
         <h3 class="font-cinzel text-2xl font-bold text-white mb-2 leading-snug">THE BOOK OF JESUS:<br>THE KINGDOM WITHIN</h3>
-        <p class="neon-teal italic mb-6 font-lora">A first-person reckoning with the most documented life in human history.</p>
-        <p class="text-slate-300 mb-10 flex-grow font-light">
+        <p class="neon-teal italic mb-4 font-lora">A first-person reckoning with the most documented life in human history.</p>
+        <p class="text-xs neon-teal font-cinzel font-semibold tracking-wider mb-6 flex items-center gap-2">
+          <span>✓ Instant Inbox Delivery</span> • <span>PDF Book + Base NFT Certificate</span>
+        </p>
+        <p class="text-slate-300 mb-8 flex-grow font-light">
           Twelve chapters. One confrontation. Written for the person who left the institution but never left the questions. This is not theology. This is architecture.
         </p>
-        <div class="flex items-center justify-between mt-auto pt-8 border-t border-white/10">
+
+        <!-- Sneak Peek Excerpt Drawer -->
+        <div id="excerpt-book-of-jesus" class="hidden mb-8 p-6 bg-black/50 border border-white/10 rounded-lg text-sm text-slate-300 space-y-3 font-light">
+          <p class="neon-teal font-cinzel font-bold text-xs uppercase tracking-widest">Sneak Peek Excerpt — Chapter I</p>
+          <p class="italic">"I did not come to start another religion. I came to break the walls between your heart and the Father. You built temples of stone and gold, yet you forgot that the only altar I ever sought was your willingness to love without condition..."</p>
+        </div>
+
+        <div class="flex items-center justify-between mt-auto pt-8 border-t border-white/10 gap-3">
           <span class="font-cinzel text-3xl font-bold text-white">$17</span>
-          <a href="https://buy.stripe.com/3cIaEW5df6t7e7Nh1G6c003" class="bg-neon-teal hover-bg-neon-teal font-cinzel font-bold px-8 py-3.5 rounded text-sm tracking-widest uppercase transition shadow-[0_0_15px_rgba(0,255,204,0.3)] hover:shadow-[0_0_25px_rgba(0,255,204,0.5)]">
-            Get The Book
-          </a>
+          <div class="flex items-center gap-3">
+            <button onclick="toggleExcerpt('excerpt-book-of-jesus')" class="border border-white/20 hover:border-[#00ffcc] text-slate-300 hover:text-white font-cinzel font-semibold px-4 py-3 rounded text-xs tracking-widest uppercase transition">
+              Sneak Peek
+            </button>
+            <a href="https://buy.stripe.com/3cIaEW5df6t7e7Nh1G6c003" class="bg-neon-teal hover-bg-neon-teal font-cinzel font-bold px-6 py-3.5 rounded text-xs sm:text-sm tracking-widest uppercase transition shadow-[0_0_15px_rgba(0,255,204,0.3)] hover:shadow-[0_0_25px_rgba(0,255,204,0.5)]">
+              Get The Book
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Product block two - LIVE -->
       <div class="border border-white/10 p-10 rounded-xl flex flex-col h-full hover:border-[#00ffcc]/50 transition duration-500 bg-white/5 shadow-2xl relative overflow-hidden">
         <h3 class="font-cinzel text-2xl font-bold text-white mb-2 leading-snug">THE GOSPEL OF ONE</h3>
-        <p class="neon-teal italic mb-6 font-lora">The theological architecture behind the confrontation.</p>
-        <p class="text-slate-300 mb-10 flex-grow font-light">
+        <p class="neon-teal italic mb-4 font-lora">The theological architecture behind the confrontation.</p>
+        <p class="text-xs neon-teal font-cinzel font-semibold tracking-wider mb-6 flex items-center gap-2">
+          <span>✓ Instant Inbox Delivery</span> • <span>PDF Book + Base NFT Certificate</span>
+        </p>
+        <p class="text-slate-300 mb-8 flex-grow font-light">
           Seven chapters. The Council of Nicaea. The hidden gospels — Thomas, Mary, Philip, the Didache. The intellectual foundation that makes the first book feel earned.
         </p>
-        <div class="flex items-center justify-between mt-auto pt-8 border-t border-white/10">
+
+        <!-- Sneak Peek Excerpt Drawer -->
+        <div id="excerpt-gospel-of-one" class="hidden mb-8 p-6 bg-black/50 border border-white/10 rounded-lg text-sm text-slate-300 space-y-3 font-light">
+          <p class="neon-teal font-cinzel font-bold text-xs uppercase tracking-widest">Sneak Peek Excerpt — Prologue</p>
+          <p class="italic">"Before Nicaea, before the councils decided which words were sacred and which were heresy, the truth walked unburdened. The hidden gospels were not lost by accident — they were buried because they gave the key back to the individual..."</p>
+        </div>
+
+        <div class="flex items-center justify-between mt-auto pt-8 border-t border-white/10 gap-3">
           <span class="font-cinzel text-3xl font-bold text-white">$27</span>
-          <a href="https://buy.stripe.com/3cI7sKaxz04JgfV8va6c004" class="bg-neon-teal hover-bg-neon-teal font-cinzel font-bold px-8 py-3.5 rounded text-sm tracking-widest uppercase transition shadow-[0_0_15px_rgba(0,255,204,0.3)] hover:shadow-[0_0_25px_rgba(0,255,204,0.5)]">
-            Get The Book
-          </a>
+          <div class="flex items-center gap-3">
+            <button onclick="toggleExcerpt('excerpt-gospel-of-one')" class="border border-white/20 hover:border-[#00ffcc] text-slate-300 hover:text-white font-cinzel font-semibold px-4 py-3 rounded text-xs tracking-widest uppercase transition">
+              Sneak Peek
+            </button>
+            <a href="https://buy.stripe.com/3cI7sKaxz04JgfV8va6c004" class="bg-neon-teal hover-bg-neon-teal font-cinzel font-bold px-6 py-3.5 rounded text-xs sm:text-sm tracking-widest uppercase transition shadow-[0_0_15px_rgba(0,255,204,0.3)] hover:shadow-[0_0_25px_rgba(0,255,204,0.5)]">
+              Get The Book
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -95,8 +139,11 @@
       <h3 class="font-cinzel text-2xl md:text-3xl font-bold text-white mb-3">
         THE MASTER ALIGNMENT WORKBOOK
       </h3>
-      <p class="text-slate-300 max-w-2xl mx-auto font-light text-base md:text-lg">
+      <p class="text-slate-300 max-w-2xl mx-auto font-light text-base md:text-lg mb-4">
         Purchase both <span class="text-white font-semibold">The Book of Jesus</span> and <span class="text-white font-semibold">The Gospel of One</span> to receive <span class="neon-teal font-semibold">The Master Alignment Workbook</span> included automatically as a <span class="neon-teal font-semibold">FREE GIFT</span> with your purchase.
+      </p>
+      <p class="text-xs text-slate-400 font-cinzel uppercase tracking-widest">
+        ⚡ Delivers PDF Books + Bundle NFT Certificate (Coordinate 4-11+) directly to your inbox.
       </p>
     </div>
   </section>
@@ -122,10 +169,20 @@
     </div>
   </section>
 
-  <!-- THE WORD OF I AM SECTION -->
-  <section class="w-full py-32 border-t border-white/5 bg-[#050b14]">
+  <!-- THE VOICE THAT INSPIRED EVERYTHING / THE WORD OF I AM SECTION -->
+  <section class="w-full py-32 border-t border-white/5 bg-[#050b14] relative">
     <div class="max-w-3xl mx-auto px-6 space-y-8 text-lg md:text-xl text-white font-lora leading-relaxed tracking-wide font-light">
       
+      <!-- Bridge Header drawing readers down the entire page -->
+      <div class="text-center mb-16 pb-12 border-b border-white/10">
+        <h2 class="font-cinzel text-2xl md:text-3xl lg:text-4xl font-bold neon-teal tracking-widest uppercase mb-4 drop-shadow-[0_0_15px_rgba(0,255,204,0.3)]">
+          The Voice That Inspired Everything
+        </h2>
+        <p class="text-slate-400 font-lora italic text-base md:text-lg">
+          The uncompromised manifesto at the root of every system, book, and line of code built here.
+        </p>
+      </div>
+
       <p class="font-cinzel text-3xl md:text-4xl font-bold neon-teal tracking-widest mb-12">
         I AM THAT I AM.
       </p>
@@ -297,6 +354,20 @@
       Renaissance Man Reincarnated
     </p>
   </footer>
+
+  <script>
+    function toggleExcerpt(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        if (el.classList.contains('hidden')) {
+          el.classList.remove('hidden');
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          el.classList.add('hidden');
+        }
+      }
+    }
+  </script>
 
 </body>
 </html>
